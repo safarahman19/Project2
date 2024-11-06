@@ -1,1 +1,156 @@
 /* custom css */
+body {
+    font-family: Arial, sans-serif;
+    color: #73746C;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #73746C
+}
+
+a {
+    color: #C9B2B2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffd700
+}
+
+.navbar {
+    background-color: #343a40;
+    padding: 1rem;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.jumbotron {
+    background: #C9B2B2;
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron .display-4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.jumbotron p.lead {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+about {
+    background-color: #ffffff;
+    padding: 3rem 0;
+}
+
+#about img {
+    border-radius: 50%;
+    border: 5px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    max-width: 250px;
+}
+
+#about h2 {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+#about ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#about ul li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+
+}
+
+main {
+    padding: 40px 20px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+button {
+    background-color: #ffd700;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+buttom:hover {
+    background-color: #e6c200;
+}
+
+@media (max-width: 768px) {
+    .navbar, .jumbotron, footer {
+        text-align: center;
+    }
+}
+
+.navbar a {
+    display: block;
+    margin: 10px 0;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 60px 20px rgba(0, 0, 0, 0.15);
+}

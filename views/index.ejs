@@ -1,12 +1,100 @@
+<link rel='stylesheet' href='/Content/app.css' />
 <%- include('partials/header.ejs') %>
-<%- include ('partials/main_nav.ejs') %>
+<%- include('partials/main_nav.ejs') %>
 <!-- Main Content -->
 <main>
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Welcome to the <%= title %> page</h1>
+    <h1 class="display-4"><%= title %></h1>
+
+    <% if (title === 'My Portfolio' || title === 'Home') {%>
+      <p class="lead">Welcome to my portfolio website!</p>
+    <% } else if (title === 'About Me') { %>
+      <p class="lead">Hi, my names Safa!</p>
+    <% } else if (title === 'Projects') { %>
+      <p class="lead">Here are some of my recent projects!</p>
+    <% } else if (title === 'Contact Me') { %>
+      <p class="lead">Get in touch with me:</p>
+    <% } %>
+
+    <% if (typeof section !== 'undefined') {%>
+    <p>Section: <%= section %></p>
+    <% } %>
   </div>
 </div>
+
+<% if (title === 'About Me') { %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src"public\Assets\images\8ea224bc-7be6-4b27-a279-b0521c9240e5_Original.jpg"
+        class="img-fluid rounded-circle" alt="Profile photo">
+      </div>
+      <div class="col-md-8">
+        <p class="lead">
+          Hi, Im Safa! I am a student at Ontario Tech University and love creating things!
+        </p>
+      </div>
+    </div>
+  </div>
+<% } %>
+
+<% if (title === 'Projects') { %>
+  <div class="container my-4">
+    <h2> My Projects</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5> BMI Calculator</h5>
+            <p class="card-text">One of my very first projects was to create a bmi calculator. Where it tracked your bmi and told you if you were, healthy, underweight, or overweight. I got to design and code the layout and was a good first project.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5> Commission and Net Salary</h5>
+            <p class="card-text"> This project calculated a persons commission and their net salary, from there it gave the user their total earning. I had to make a tabular formatting and it was a great learning experience. </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5> Encryption & Decryption</h5>
+            <p class="card-text"> This is a more advanced code that took discrete math and computer security and mixed it into one. This project took english words and formed them into secret codes for encryption, then outputed the decrypted version. This program had used substitution, playfair, caesar, transposition, product, and RSA ciphers to encrypt and decrypt the messages.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<% } %>
+
+<% if (title === 'Contact Me') { %>
+  <div class="container my-4">
+    <h2>Contact Me</h2>
+    <form action="/submit-contact" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn=primary"> Send message</button>
+    </form>
+  </div>  
+<% } %>
+
+
 </main>
-<%- include ('partials/bottom_nav.ejs') %>
-<%- include ('partials/footer.ejs') %>
+<%- include('partials/bottom_nav.ejs') %>
+<%- include('partials/footer.ejs') %>
